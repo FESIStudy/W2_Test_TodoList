@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import ActionBtn from "../../../components/action-btn";
+import ActionBtn from "../../../components/action-btn/action-btn";
 import EditImgBtn from "../../../components/edit-img-btn";
 import TodoItemDetail from "../../../components/todo-item-detail";
 import { useImageUpload } from "../../../hooks/useImageUpload";

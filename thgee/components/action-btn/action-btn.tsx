@@ -1,8 +1,8 @@
 import Image from "next/image";
-import checkIcon from "../public/icons/check.svg";
-import plusActiveIcon from "../public/icons/plus-active.svg";
-import plusInactiveIcon from "../public/icons/plus-inactive.svg";
-import deleteIcon from "../public/icons/delete.svg";
+import checkIcon from "../../public/icons/check.svg";
+import plusActiveIcon from "../../public/icons/plus-active.svg";
+import plusInactiveIcon from "../../public/icons/plus-inactive.svg";
+import deleteIcon from "../../public/icons/delete.svg";
 import { FormEventHandler } from "react";
 
 // 버튼 타입과 상태에 따라 사용할 아이콘 매핑
