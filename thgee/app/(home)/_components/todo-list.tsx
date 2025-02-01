@@ -2,7 +2,7 @@ import { ItemResponse } from "../../../services/apis/itemApi";
 import Image from "next/image";
 import todoLabel from "../../../public/imgs/todo-label.svg";
 import doneLabel from "../../../public/imgs/done-label.svg";
-import TodoItem from "../../../components/todo-item";
+import TodoItem from "../../../components/todo-item/todo-item";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import EmptyDataImg from "./empty-data-img";
 

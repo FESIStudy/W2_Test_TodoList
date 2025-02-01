@@ -3,9 +3,9 @@
 import Image from "next/image";
 import todoCircle from "../public/icons/todo-circle.svg";
 import doneCircle from "../public/icons/done-circle.svg";
-import { TODO_DETAIL_ROUTE } from "../constants/routes";
+import { TODO_DETAIL_ROUTE } from "../../constants/routes";
 import Link from "next/link";
-import { ItemResponse, updateItem } from "../services/apis/itemApi";
+import { ItemResponse, updateItem } from "../../services/apis/itemApi";
 import { Dispatch, SetStateAction } from "react";
 
 // 완료 여부에 따른 스타일 및 아이콘 정의

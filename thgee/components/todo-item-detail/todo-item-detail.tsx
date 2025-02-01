@@ -2,7 +2,7 @@ import Image from "next/image";
 import todoCircle from "../public/icons/todo-circle.svg";
 import doneCircle from "../public/icons/done-circle.svg";
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
-import { Item } from "../types/ItemType";
+import { Item } from "../../types/ItemType";
 
 interface TodoItemDetailProps {
   isDone?: boolean;

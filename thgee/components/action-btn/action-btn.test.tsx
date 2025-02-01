@@ -1,38 +1,22 @@
-import { render } from "@testing-library/react";
-import ActionBtn from "./action-btn";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import ActionBtn from "../action-btn/action-btn";
 
-describe("actionBtn Component", () => {
-  // 1. 버튼이 올바르게 렌더링되는지 테스트
-  test("should render correctly with different types", () => {
-    render(<ActionBtn onClick={() => {}} type="add" />);
-    // - 각 버튼 타입별로 렌더링되는지 테스트 (add, delete, edit)
-    // - 아이콘이 정상적으로 렌더링되는지 확인
-    // - 버튼 텍스트가 올바르게 표시되는지 확인 (add는 작은 화면에서 숨겨지는지 체크)
-  });
+// Jest에서 window.innerWidth를 변경할 수 있도록 설정
+const resizeWindow = (width: number) => {
+  window.innerWidth = width;
+  window.dispatchEvent(new Event("resize"));
+};
 
-  // 2. 버튼 클릭 시 onClick 이벤트가 정상적으로 실행되는지 테스트
-  test("should trigger onClick event when clicked", () => {
-    // - Mock 함수 생성하여 onClick이 실행되는지 확인
-    // - 버튼 클릭 후 onClick이 한 번 실행되었는지 검증
-  });
+describe("ActionBtn 반응형 테스트", () => {
+  test("뷰포트가 480px 미만일 때 '추가하기' 텍스트가 숨겨지는지 확인", () => {
+    resizeWindow(49);
+    render(<ActionBtn type="add" onClick={() => {}} />);
 
-  // 3. `add` 버튼이 비활성화된 상태에서 클릭되지 않는지 테스트
-  test("should not be clickable when disabled", () => {
-    // - active=false 상태로 버튼 렌더링
-    // - fireEvent.click 실행 후 onClick 호출되지 않는지 검증
-  });
-
-  // 4. `delete` 버튼이 올바른 스타일과 텍스트를 가지는지 테스트
-  test("should have the correct styles and text for delete button", () => {
-    // - delete 타입으로 버튼 렌더링
-    // - 스타일 클래스가 올바르게 적용되었는지 확인
-    // - 텍스트가 '삭제하기'로 표시되는지 체크
-  });
-
-  // 5. `edit` 버튼이 비활성화일 때 스타일이 변경되는지 테스트
-  test("should have disabled styles when inactive", () => {
-    // - active=false 상태로 edit 버튼 렌더링
-    // - 버튼이 disabled 상태인지 확인
-    // - disabled 스타일이 적용되었는지 검증
+    const addButtonText = screen.queryByText("추가하기");
+    const style = window.getComputedStyle(addButtonText!);
+    // 요소가 존재하지만, display: none인지 확인
+    console.log(style);
+    expect(style.display).toBe("none");
   });
 });

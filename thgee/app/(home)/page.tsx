@@ -1,6 +1,6 @@
 "use client";
 
-import AddInput from "../../components/add-input";
+import AddInput from "../../components/add-input/add-input";
 import { getItems, ItemResponse } from "../../services/apis/itemApi";
 import TodoList from "./_components/todo-list";
 import { useEffect, useState } from "react";

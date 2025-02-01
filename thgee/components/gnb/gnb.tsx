@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logoSmall from "../public/imgs/logo-small.svg";
 import logoLarge from "../public/imgs/logo-large.svg";
-import { HOME_PAGE_ROUTE } from "../constants/routes";
+import { HOME_PAGE_ROUTE } from "../../constants/routes";
 import { usePathname, useRouter } from "next/navigation";
 
 const Gnb = () => {

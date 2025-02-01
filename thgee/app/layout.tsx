@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Gnb from "../components/gnb";
+import Gnb from "../components/gnb/gnb";
 
 export const metadata: Metadata = {
   title: "Todo List",

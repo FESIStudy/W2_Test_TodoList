@@ -2,8 +2,8 @@
 
 import { useParams } from "next/navigation";
 import ActionBtn from "../../../components/action-btn/action-btn";
-import EditImgBtn from "../../../components/edit-img-btn";
-import TodoItemDetail from "../../../components/todo-item-detail";
+import EditImgBtn from "../../../components/edit-img-btn/edit-img-btn";
+import TodoItemDetail from "../../../components/todo-item-detail/todo-item-detail";
 import { useImageUpload } from "../../../hooks/useImageUpload";
 import { useItemDetail } from "../../../hooks/useItemDetail";
 import { Item } from "../../../types/ItemType";

@@ -16,14 +16,14 @@ const ICONS = {
 };
 
 // 버튼 타입별 스타일 정의
-const BUTTON_STYLES = {
+export const BUTTON_STYLES = {
   add: "w-[54.78px] tablet:w-[164.35px] bg-violet-600 hover:bg-violet-700 text-white disabled:bg-slate-200 disabled:text-slate-900",
   delete: "bg-rose-500 text-white hover:bg-rose-600",
   edit: "bg-lime-300 hover:bg-lime-400 text-slate-900 disabled:bg-slate-200 disabled:text-slate-900",
 };
 
 // 버튼 타입별 텍스트 정의
-const BUTTON_TEXTS = {
+export const BUTTON_TEXTS = {
   add: "추가하기",
   delete: "삭제하기",
   edit: "수정 완료",
