@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { HOME_PAGE_ROUTE } from "../constants/routes";
+import { HOME_PAGE_ROUTE } from "../../constants/routes";
 import {
   getItem,
   UpdateItemProps,
   updateItem,
   deleteItem,
-} from "../services/apis/itemApi";
-import { Item } from "../types/ItemType";
+} from "../../services/apis/itemApi";
+import { Item } from "../../types/ItemType";
 import { useRouter } from "next/navigation";
 
 export const useItemDetail = (id: number) => {

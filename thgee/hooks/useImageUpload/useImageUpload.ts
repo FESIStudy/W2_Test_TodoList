@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useRef } from "react";
-import { uploadImage } from "../services/apis/imageApi";
-import { Item } from "../types/ItemType";
+import { uploadImage } from "../../services/apis/imageApi";
+import { Item } from "../../types/ItemType";
 
 export const useImageUpload = (
   setItem: React.Dispatch<React.SetStateAction<Item | undefined>>,
